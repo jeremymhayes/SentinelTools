@@ -2,7 +2,13 @@
   "name": "@sentinel/config",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "exports": {
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./security-headers": "./security-headers.mjs"
+  },
   "files": [
-    "tsconfig.base.json"
+    "tsconfig.base.json",
+    "security-headers.mjs"
   ]
 }
