@@ -36,7 +36,7 @@ export default function AboutPage() {
           <p className="copy-sm">
             Not an antivirus, not a penetration test, not a guarantee. A
             passing report means no obvious issues were detected by these
-            checks — nothing more. Treat the reports as one input to your own
+            checks, nothing more. Treat the reports as one input to your own
             judgment, not a substitute for it.
           </p>
         </TechnicalPanel>

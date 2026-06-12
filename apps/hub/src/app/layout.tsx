@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: '%s | Sentinel Tools',
   },
   description:
-    'Practical security tools for links, repositories, and files. Scan a URL, audit a public GitHub repo, or verify a file — plain-English reports, no accounts.',
+    'Practical security tools for links, repositories, and files. Scan a URL, audit a public GitHub repo, or verify a file. Plain-English reports, no accounts.',
 }
 
 export default function RootLayout({

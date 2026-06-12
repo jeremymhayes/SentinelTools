@@ -22,7 +22,7 @@ const tools = [
     name: 'RepoSentinel',
     tagline: 'GitHub repository health scanner',
     description:
-      'Point it at a public GitHub repository. Reads metadata, community files, dependency manifests, and risk indicators — then reports what it found, read-only.',
+      'Point it at a public GitHub repository. Reads metadata, community files, dependency manifests, and risk indicators, then reports what it found. Read-only, nothing gets cloned.',
     checks: ['Metadata', 'Hygiene files', 'Dependencies', 'Risk indicators'],
     href: TOOL_URLS.repo,
   },
@@ -31,7 +31,7 @@ const tools = [
     name: 'FileSentinel',
     tagline: 'Local file integrity checker',
     description:
-      'Drop a file. Hashes are computed in your browser — nothing is uploaded. Verify an expected checksum, inspect metadata, and flag suspicious traits.',
+      'Drop a file. Hashes are computed in your browser, so nothing is uploaded. Verify an expected checksum, inspect metadata, and flag suspicious traits.',
     checks: ['SHA-256', 'Hash compare', 'Metadata', 'Suspicious traits'],
     href: TOOL_URLS.file,
   },
@@ -44,7 +44,7 @@ const principles = [
   },
   {
     title: 'Honest language',
-    body: 'No tool here will ever call something "safe" or "virus-free". The strongest claim you will see is "no obvious issues detected by these checks" — because that is all a scan can honestly say.',
+    body: 'No tool here will ever call something "safe" or "virus-free". The strongest claim you will see is "no obvious issues detected by these checks". That is all a scan can honestly say.',
   },
   {
     title: 'Nothing leaves your machine without saying so',
@@ -59,10 +59,7 @@ export default function HomePage() {
       <section className="pt-6 pb-16 sm:pt-10">
         <div className="sheet">
           <div className="mx-auto w-full max-w-3xl text-center">
-            <p className="anim-fade meta-label justify-center">
-              Sentinel Tools — security suite
-            </p>
-            <h1 className="anim-mask-line display-title-xl mt-6">
+            <h1 className="anim-mask-line display-title-xl">
               <span className="mask-line">
                 <span className="block" style={{ animationDelay: '0.08s' }}>
                   Check before
@@ -82,8 +79,8 @@ export default function HomePage() {
               style={{ animationDelay: '0.4s' }}
             >
               Practical security tools for links, repositories, and files.
-              Paste, scan, read the report — plain English, no account, no
-              upload.
+              Run a scan, read the report in plain English. No accounts,
+              nothing uploaded.
             </p>
             <div
               className="anim-rise mt-8 flex flex-wrap items-center justify-center gap-3"
@@ -102,12 +99,6 @@ export default function HomePage() {
                 <ArrowUpRight aria-hidden="true" size={14} />
               </a>
             </div>
-            <p
-              className="anim-fade meta-label-plain mt-6 justify-center"
-              style={{ animationDelay: '0.7s' }}
-            >
-              Early preview — checks and reports are still expanding
-            </p>
           </div>
         </div>
       </section>

@@ -16,7 +16,7 @@ export const SiteFooter: React.FC<{
   <footer className="section-rule">
     <div className="sheet flex flex-col gap-5 py-8 sm:flex-row sm:items-center sm:justify-between">
       <MetadataLabel plain>
-        {appName} — built by{' '}
+        {appName} · built by{' '}
         <a
           href="https://www.jeremymhayes.com"
           target="_blank"
