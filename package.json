@@ -1,0 +1,18 @@
+{
+  "name": "sentinel-tools",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:hub": "npm run dev -w apps/hub",
+    "dev:repo": "npm run dev -w apps/repo",
+    "dev:file": "npm run dev -w apps/file",
+    "dev:link": "npm run dev -w apps/link",
+    "build": "npm run build -w apps/hub && npm run build -w apps/repo && npm run build -w apps/file && npm run build -w apps/link",
+    "typecheck": "npm run typecheck -w packages/sentinel-core && npm run typecheck -w apps/hub && npm run typecheck -w apps/repo && npm run typecheck -w apps/file && npm run typecheck -w apps/link",
+    "test": "npm run test -w packages/sentinel-core && npm run test -w apps/repo && npm run test -w apps/file && npm run test -w apps/link"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sentinel-hub",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  // Custom domain is attached in the Cloudflare dashboard or via
+  // `routes` once DNS for sentineltools.net lives on Cloudflare:
+  // "routes": [{ "pattern": "sentineltools.net", "custom_domain": true }]
+  "vars": {}
+}

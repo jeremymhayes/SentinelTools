@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sentinel-file",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-06-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  // VIRUSTOTAL_API_KEY (future reputation lookup) must be a runtime secret:
+  //   npx wrangler secret put VIRUSTOTAL_API_KEY
+  // It is server-side only and must never appear in a NEXT_PUBLIC_* var.
+  "routes": [{ "pattern": "file.sentineltools.net", "custom_domain": true }],
+  "vars": {}
+}

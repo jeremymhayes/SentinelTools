@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+@import '@sentinel/ui/styles.css';
+
+/* Tailwind must scan the shared UI package source for class names. */
+@source '../../../../packages/sentinel-ui/src';
