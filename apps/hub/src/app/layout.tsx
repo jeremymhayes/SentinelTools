@@ -48,7 +48,12 @@ export default function RootLayout({
     >
       <body className="antialiased">
         <AppShell
-          brand={{ tag: 'ST', nameLead: 'Sentinel', nameAccent: 'Tools' }}
+          brand={{
+            tag: 'ST',
+            nameLead: 'Sentinel',
+            nameAccent: 'Tools',
+            iconSrc: '/sentineltools_icon.ico',
+          }}
           navItems={[
             { href: '/', label: 'Tools' },
             { href: '/about', label: 'About' },

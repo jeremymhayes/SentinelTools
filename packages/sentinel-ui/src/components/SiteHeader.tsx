@@ -12,6 +12,8 @@ export interface BrandConfig {
   nameLead: string
   /** Blue part of the split wordmark, e.g. "Sentinel". */
   nameAccent: string
+  /** Optional icon path (from the app's public dir); replaces the [TAG] mark. */
+  iconSrc?: string
 }
 
 export interface NavItem {
@@ -52,9 +54,20 @@ export const SiteHeader: React.FC<{
           className="group flex items-baseline gap-2 sm:gap-2.5"
           aria-label={`${brand.nameLead}${brand.nameAccent} home`}
         >
-          <span className="font-[family-name:var(--font-mono)] text-sm font-bold tracking-[0.08em] text-[color:var(--accent)]">
-            [{brand.tag}]
-          </span>
+          {brand.iconSrc ? (
+            // eslint-disable-next-line @next/next/no-img-element -- .ico favicon asset; next/image adds nothing here
+            <img
+              src={brand.iconSrc}
+              alt=""
+              width={20}
+              height={20}
+              className="self-center"
+            />
+          ) : (
+            <span className="font-[family-name:var(--font-mono)] text-sm font-bold tracking-[0.08em] text-[color:var(--accent)]">
+              [{brand.tag}]
+            </span>
+          )}
           <span className="font-[family-name:var(--font-display)] text-base font-semibold tracking-[-0.01em] text-[color:var(--text)] sm:text-lg">
             {brand.nameLead}
             <span className="text-[color:var(--accent)]">
