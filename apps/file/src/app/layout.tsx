@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'FileSentinel | Local File Integrity Checker',
+    default: 'Home',
     template: '%s | FileSentinel',
   },
   description:

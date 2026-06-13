@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'LinkSentinel | URL Privacy & Security Scanner',
+    default: 'Home',
     template: '%s | LinkSentinel',
   },
   description:

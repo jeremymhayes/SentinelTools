@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sentinel Tools | Practical Security Checks',
+    default: 'Home',
     template: '%s | Sentinel Tools',
   },
   description:

@@ -29,7 +29,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'RepoSentinel | GitHub Repository Health Scanner',
+    default: 'Home',
     template: '%s | RepoSentinel',
   },
   description:
